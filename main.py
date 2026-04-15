@@ -94,7 +94,8 @@ async def grade_endpoint(
             image_path=tmp_path,
             model=model,
             answer_key=current_answer_key,
-            conf_thresh=0.25
+            conf_thresh=0.25,
+            device="cpu"   # ✅ ADD THIS
         )
 
         # 2. Draw overlay
